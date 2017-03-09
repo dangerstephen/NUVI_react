@@ -1,16 +1,31 @@
 import React, { Component } from 'react';
+import Activities from './Activities.js'
+import $ from '../node_modules/jquery/dist/jquery.js'
 import './App.css';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      activities: null
+    }
+  }
+
+  componentDidMount() {
+    $.get("https://nuvi-challenge.herokuapp.com/activities", function(data) {
+      this.setState({
+        activities: data
+      });
+    }.bind(this));
+  }
+
+
+
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Activities activities={this.state.activities}/>
       </div>
     );
   }
