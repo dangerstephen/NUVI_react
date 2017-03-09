@@ -15,7 +15,7 @@ class Activity extends Component {
         <div className="col-md-6">
         <div className="Card">
   <div className="provider"><i className={"card-social__icon fa fa-"+ provider }></i></div>
-  <div className="user"><img src={activity.actor_avator}></img></div>
+  <div className="user"><img src={activity.actor_avator} alt="avatar"></img></div>
   <div className="details">
   <h1>{activity.actor_name}</h1>
   <h2><a target="_blank" href={activity.actor_url}>@{activity.actor_username}</a></h2>

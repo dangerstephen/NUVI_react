@@ -1,0 +1,11 @@
+.navbar {
+    height: 100px;
+    width: 100%;
+    background-color: #000000;
+    margin-left: 10%;
+}
+
+.navbar img {
+    height: 50px;
+    width: 200px;
+}

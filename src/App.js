@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Activities from './Activities.js'
-import $ from '../node_modules/jquery/dist/jquery.js'
+import Activities from './Activities.js';
+import NavBar from './NavBar.js';
+import $ from '../node_modules/jquery/dist/jquery.js';
 import './App.css';
 
 class App extends Component {
@@ -25,6 +26,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <NavBar />
         <Activities activities={this.state.activities}/>
       </div>
     );
