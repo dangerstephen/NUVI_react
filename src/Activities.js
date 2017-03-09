@@ -6,10 +6,18 @@ class Activities extends Component {
 
   render() {
     if(this.props.activities === null){
-      return (<p>Please Wait...</p>)
+      return (
+        <div className="Card">
+  <div className="provider"><i className="card-social__icon fa fa-search"></i></div>
+  <div className="details">
+  <h1>Searching For Posts...</h1>
+  </div>
+  <div className="count"></div>
+      </div>
+      );
     } else {
       return (
-        <div className="Event-list">
+        <div className="">
           {this.props.activities.map(function(activity){
             return <Activity activity={activity} key={activity.id}/>
           })}

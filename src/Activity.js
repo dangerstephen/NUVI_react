@@ -10,18 +10,25 @@ class Activity extends Component {
 
   render() {
     var activity = this.props.activity;
+    var provider = activity.provider;
       return (
-        <div className="Event">
-          <div className="avatar"><img className="Avatar" src={activity.actor_avator}></img></div>
-          <h4>Name: {activity.actor_name}</h4>
-          <p>Handle: @{activity.actor_username}</p>
-          <p> Provider: {activity.provider}</p>
-          <p>About: {activity.actor_description}</p>
-          <p><a href={activity.actor_url}>{activity.actor_url}</a></p>
-          <p> Likes: {activity.activity_likes}</p>
-          <p> Comments: {activity.activity_comments} </p>
-          <p> Shares: {activity.activity_shares} </p>
-        </div>
+        <div className="col-md-6">
+        <div className="Card">
+  <div className="provider"><i className={"card-social__icon fa fa-"+ provider }></i></div>
+  <div className="user"><img src={activity.actor_avator}></img></div>
+  <div className="details">
+  <h1>{activity.actor_name}</h1>
+  <h2><a target="_blank" href={activity.actor_url}>@{activity.actor_username}</a></h2>
+  </div>
+  <div className="count">
+      <ul>
+        <li className="media">{activity.activity_likes}<span>Likes</span></li>
+        <li className="followers">{activity.activity_comments}<span>Comments</span></li>
+        <li className="following">{activity.activity_shares}<span>Shares</span></li>
+      </ul>
+    </div>
+      </div>
+      </div>
       );
 
   }
