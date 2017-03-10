@@ -20,6 +20,7 @@ class App extends Component {
         activities: data
       });
     }.bind(this));
+    console.log("The Data was Retrieved");
   }
 
 
