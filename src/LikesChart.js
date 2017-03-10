@@ -15,7 +15,8 @@ class LikesChart extends Component {
         provider_likes[activity.provider] += activity.activity_likes;
       }
       return (
-<div className="Card">
+<div className="chart">
+<h2 className="info"> Likes per Provider </h2>
         <Chart
           chartType="PieChart"
           data={[['Provider', 'Provider total likes'],
@@ -24,13 +25,14 @@ class LikesChart extends Component {
               ['Tumblr', (provider_likes.tumblr)],
               ['Twitter',  (provider_likes.twitter)]]}
 
-          options={{pieHole: 0.3, colors: ['#54c7dc', '#ef463f', '#83c059', '#dcbd8e'], title: 'Total Likes Per Provider', pieSliceText: "label",}}
+          options={{pieHole: 0, colors: ['#3b5998', '#fb3958', '#939393', '#4099ff'], backgroundColor: "#000000", pieSliceText: "label", legend: 'none'}}
           graph_id="DonutChart"
           width="100%"
           height="360px"
 
         />
         </div>
+
       )
     } else {
       return (<p>There is no data for a chart at the time</p>);
