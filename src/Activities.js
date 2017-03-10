@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Activity from './Activity.js';
-import './App.css';
+import './styles/App.css';
 
 class Activities extends Component {
 
@@ -17,7 +17,7 @@ class Activities extends Component {
       );
     } else {
       return (
-        <div className="">
+        <div className="cards">
           {this.props.activities.map(function(activity){
             return <Activity activity={activity} key={activity.id}/>
           })}

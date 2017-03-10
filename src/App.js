@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Activities from './Activities.js';
 import NavBar from './NavBar.js';
+import LikesChart from './LikesChart.js';
 import $ from '../node_modules/jquery/dist/jquery.js';
-import './App.css';
+import './styles/App.css';
 
 class App extends Component {
 
@@ -27,6 +28,8 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
+        <div id='chart-container'></div>
+        <LikesChart activities={this.state.activities}/>
         <Activities activities={this.state.activities}/>
       </div>
     );

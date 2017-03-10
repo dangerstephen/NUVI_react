@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './styles/App.css';
 
 class Activity extends Component {
 
@@ -22,9 +22,9 @@ class Activity extends Component {
   </div>
   <div className="count">
       <ul>
-        <li className="media">{activity.activity_likes}<span>Likes</span></li>
-        <li className="followers">{activity.activity_comments}<span>Comments</span></li>
-        <li className="following">{activity.activity_shares}<span>Shares</span></li>
+        <li className="likes">{activity.activity_likes}<span>Likes</span></li>
+        <li className="comments">{activity.activity_comments}<span>Comments</span></li>
+        <li className="shares">{activity.activity_shares}<span>Shares</span></li>
       </ul>
     </div>
       </div>
