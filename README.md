@@ -30,11 +30,15 @@ NOTE: If the broweser fails to open you can run the app by going to localhost:30
 
 ## How it works
 
-The app sends a request to https://nuvi-challenge.herokuapp.com/activities and grabs the array of objects. The array of objects is then iterated over and cards with important information are created for each.
+The app sends a request to https://nuvi-challenge.herokuapp.com/activities and grabs the array of objects. The array of objects is then iterated over and cards with important information are created for each. After the data is pulled a chart is created based off likes of each provider that information is getting pulled from. The chart is created through Google's Charting API. 
 
 Cards look like so:
 
 <img width="1440" alt="screen shot 2017-03-10 at 1 09 31 pm" src="https://cloud.githubusercontent.com/assets/22550925/23813272/edffaece-0592-11e7-8d4b-42feedbad32b.png">
+
+And the Chart looks like this: 
+
+<img width="1438" alt="screen shot 2017-03-10 at 1 18 34 pm" src="https://cloud.githubusercontent.com/assets/22550925/23813537/29a27550-0594-11e7-9698-d4bfd330f3d5.png">
 
 
 
